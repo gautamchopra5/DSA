@@ -69,6 +69,53 @@
             ],
             "group": "build",
             "detail": "compiler: /usr/bin/g++"
+        },
+        {
+            "type": "shell",
+            "label": "CMake: configure",
+            "command": "/bin/bash",
+            "args": [
+                "-lc",
+                "cmake -S . -B build"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": []
+        },
+        {
+            "type": "shell",
+            "label": "CMake: build active AOC target",
+            "command": "/bin/bash",
+            "args": [
+                "-lc",
+                "cmake --build build --target aoc_2025_${fileBasenameNoExtension}"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": [],
+            "dependsOn": [
+                "CMake: configure"
+            ],
+            "group": "build"
+        },
+        {
+            "type": "shell",
+            "label": "CMake: run active AOC target",
+            "command": "/bin/bash",
+            "args": [
+                "-lc",
+                "./build/aoc_2025_${fileBasenameNoExtension}"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": [],
+            "dependsOn": [
+                "CMake: build active AOC target"
+            ],
+            "group": "test"
         }
     ],
     "version": "2.0.0"
