@@ -1,0 +1,19 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "C/C++: run nearest project (make)",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${fileDirname}/../bin/main",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${fileDirname}/..",
+      "environment": [],
+      "externalConsole": false,
+      "MIMode": "gdb",
+      "miDebuggerPath": "/usr/bin/gdb",
+      "preLaunchTask": "DSA: make build (nearest project)"
+    }
+  ]
+}
