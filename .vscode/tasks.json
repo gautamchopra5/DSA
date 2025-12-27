@@ -2,7 +2,7 @@
     "tasks": [
         {
             "type": "shell",
-            "label": "C/C++: make build (nearest project)",
+            "label": "DSA: make build (nearest project)",
             "command": "/bin/bash",
             "args": [
                 "-lc",
@@ -22,7 +22,7 @@
         },
         {
             "type": "shell",
-            "label": "C/C++: make run (nearest project)",
+            "label": "DSA: make run (nearest project)",
             "command": "/bin/bash",
             "args": [
                 "-lc",
@@ -33,7 +33,7 @@
             },
             "problemMatcher": [],
             "dependsOn": [
-                "C/C++: make build (nearest project)"
+                "DSA: make build (nearest project)"
             ],
             "group": "test",
             "detail": "Runs the nearest subproject containing a Makefile."

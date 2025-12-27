@@ -1,19 +1,19 @@
-#!/usr/bin/env bash
-set -euo pipefail
+#!/bin/sh
+set -eu
 
-if [[ $# -ne 1 ]]; then
+if [ "$#" -ne 1 ]; then
   echo "Usage: $0 <project-name>"
   exit 1
 fi
 
 project="$1"
 
-if [[ -e "$project" ]]; then
+if [ -e "$project" ]; then
   echo "Error: '$project' already exists."
   exit 1
 fi
 
-mkdir -p "$project"/{src,include}
+mkdir -p "$project/src" "$project/include"
 
 cat > "$project/Makefile" <<'EOF'
 CXX := g++
