@@ -14,10 +14,7 @@
             "problemMatcher": [
                 "$gcc"
             ],
-            "group": {
-                "kind": "build",
-                "isDefault": true
-            },
+            "group": "build",
             "detail": "Builds the nearest subproject containing a Makefile."
         },
         {
@@ -35,7 +32,10 @@
             "dependsOn": [
                 "DSA: make build (nearest project)"
             ],
-            "group": "test",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
             "detail": "Runs the nearest subproject containing a Makefile."
         }
     ],

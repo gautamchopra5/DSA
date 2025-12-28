@@ -3,5 +3,6 @@
         "vector": "cpp"
     },
     "C_Cpp.default.buildTask": "DSA: make build (nearest project)",
-    "task.defaultBuildTask": "DSA: make build (nearest project)"
+    "task.defaultBuildTask": "DSA: make build (nearest project)",
+    "C_Cpp.debugShortcut": "custom"
 }
