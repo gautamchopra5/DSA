@@ -50,4 +50,8 @@ EOF
 
 sed -i "s/__PROJECT__/${project}/g" "$project/src/main.cpp"
 
+cat > "$project/.gitignore" <<'EOF'
+bin/
+EOF
+
 echo "Created project: $project"
